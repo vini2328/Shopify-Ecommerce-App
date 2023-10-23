@@ -8,11 +8,17 @@ import authRoute from './routes/authRoute.js'
 import productRoutes from './routes/productRoutes.js'
 import cors from 'cors'
 import path from 'path'
+import {fileURLToPath} from 'url'
 
 
 dotenv.config()
 
+const __filename=fileURLToPath(import.meta.url)
+const __dirname=path.dirname(__filename)
+
 connectDB()
+
+
 const app= express()
 
 // middleware
